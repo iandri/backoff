@@ -72,7 +72,7 @@ func Retry(ctx context.Context, p Policy, e Executer) error {
 	
 	var err error
 	for Continue(b) {
-		err := e.Execute(ctx)
+		err = e.Execute(ctx)
 		if err == nil {
 			return nil
 		}
